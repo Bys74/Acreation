@@ -1,0 +1,1 @@
+/* Placeholder for Lightbox2 JS - use official dist in production */

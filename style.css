@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e1e1e;
+
+  /* Image de fond globale */
+  background: url('images/salon.webp') center center / cover no-repeat fixed;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #1e1e1e;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav a {
+  margin-left: 10px;
+  color: #1e1e1e;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #d48fa3;
+}
+
+/* Section hero-minimal */
+.hero-minimal {
+  position: relative;
+  padding: 120px 20px 100px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+/* Overlay sombre pour lisibilité */
+.hero-minimal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.287);
+  z-index: -1;
+}
+
+/* Contenu héro */
+.hero-minimal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-minimal-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero-minimal-text p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  color: #eee;
+}
+
+.hero-minimal .btn {
+  padding: 12px 28px;
+  background: #fca4f196;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.hero-minimal .btn:hover {
+  background: #d384b9;
+}
+
+.hero-minimal-deco img {
+  width: 80px;
+  opacity: 0.8;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15); /* blanc transparent */
+  color: #333;
+  position: relative;
+  z-index: 2;
+    background: rgba(0, 0, 0, 0.287);
+}
+
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #fffdfd;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #d48fa3;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #b76c82;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 0px;
+  background: rgba(0, 0, 0, 0.287); 
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #d48fa3;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #b76c82;
+
+}
+
+#contact p {
+  margin-top: 0; /* supprimer marge par défaut */
+  padding-top: 30px; /* espace voulu */
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 90vw;
+    max-width: 300px;
+  }
+}
