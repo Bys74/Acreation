@@ -6,22 +6,30 @@
   <title>A.CréationCoiffure</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <header class="header">
     <div class="container">
-      <nav class="nav">
-        <div class="logo">
-          <img src="images/Logo.jpg" alt="Logo A.CréationCoiffure" />
-          <span>A. CréationCoiffure</span>
-        </div>
-        <a href="#services">Services</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="https://a-creationcoiffure2.reservio.com" target="_blank" rel="noopener" class="btn">Prise de rendez-vous</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<nav class="nav">
+  <div class="logo">
+    <img src="images/Logo.jpg" alt="Logo A.CréationCoiffure" />
+    <span>A. CréationCoiffure</span>
+  </div>
+  <a href="#services">Services</a>
+  <a href="#realisations">Réalisations</a>
+  <a href="https://a-creationcoiffure2.reservio.com" target="_blank" rel="noopener" class="btn">Prise de rendez-vous</a>
+  <a href="#contact">Contact</a>
+
+  <!-- Ajout des icônes réseaux dans le menu -->
+  <div class="nav-social-icons">
+    <a href="https://instagram.com/a_creationcoiffure" target="_blank" rel="noopener" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com/@a.creationcoiffuremarnaz" target="_blank" rel="noopener" aria-label="TikTok" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+</nav>
+
     </div>
   </header>
 
@@ -39,19 +47,28 @@
     <h2 class="section-title">Nos Services</h2>
     <div class="cards">
       <div class="card">
-        <img src="images/femme.jpg" alt="Coupe Femme" />
-        <h3>Coupe Femme</h3>
-        <p>Coupe tendance et personnalisée selon votre style.</p>
+        <img src="images/mariage.jpg" alt="Coiffure mariage" />
+        <div class="card-text">
+          <h3>Coiffure de mariage & événements</h3>
+          <p>Pour le plus beau jour de votre vie, chaque détail compte et votre coiffure en fait partie. Ensemble créons une coiffure qui vous ressemble, en accord avec votre robe, votre style et l'ambiance de votre mariage.
+          Chignon, attaches bohèmes, coiffures romantiques ou modernes. Je vous accompagne en douceur, de l’essai au jour J.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/service2.jpg" alt="Coloration" />
-        <h3>Coloration</h3>
-        <p>Techniques avancées pour sublimer votre couleur.</p>
+
+      <div class="card reverse">
+        <img src="images/coloration.jpeg" alt="Coloration" />
+        <div class="card-text">
+          <h3>Coloration balayage & effets lumière</h3>
+          <p>Envie d'illuminer votre couleur, de donner du relief à vos cheveux ou de camoufler les premiers cheveux blanc ? Je vous propose des techniques douces et adaptées à vos envies, pour un résultat naturel et lumineux.</p>
+        </div>
       </div>
+
       <div class="card">
         <img src="images/service3.jpg" alt="Soins capillaires" />
-        <h3>Soins capillaires</h3>
-        <p>Des traitements pour renforcer et hydrater vos cheveux.</p>
+        <div class="card-text">
+          <h3>Soins capillaires</h3>
+          <p>Des traitements adaptés à vos besoins pour renforcer, hydrater ou réparer vos cheveux en profondeur. Offrez-leur une pause bien-être.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -72,19 +89,21 @@
         <textarea name="message" placeholder="Votre message..." required></textarea>
         <button class="btn" type="submit">Envoyer</button>
       </form>
-      <p style="margin-top: 0px; font-weight: 00; color: #555;">
-        Ou contactez-nous directement par téléphone : <strong>06 00 00 00 00</strong><br />
+      <p style="margin-top: 0px; font-weight: 00; color: #fafafa;">
+        Ou contactez moi directement par téléphone : <strong>06 00 00 00 00</strong><br />
         Ou via nos réseaux sociaux ci-dessous.
       </p>
     </div>
+    <div class="social-icons">
+  <a href="https://instagram.com/a_creationcoiffure" target="_blank" rel="noopener" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://tiktok.com/@a.creationcoiffuremarnaz" target="_blank" rel="noopener" aria-label="TikTok" class="tiktok"><i class="fab fa-tiktok"></i></a>
+  <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
   </section>
 
   <footer class="footer">
-    <div class="social-icons">
-      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    </div>
+
+
     <p>&copy; 2025 A.CréationCoiffure - Tous droits réservés</p>
   </footer>
 
