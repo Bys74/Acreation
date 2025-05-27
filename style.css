@@ -614,6 +614,7 @@ padding: 12px 28px;
     display: block;
     height: 3px;
     background: black;
+    color: black;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
