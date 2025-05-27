@@ -101,7 +101,7 @@ a {
 
 .hero-minimal {
   position: relative;
-  padding: 120px 20px 100px;
+  padding: 80px 20px 100px;
   text-align: center;
   color: white;
   z-index: 1;
@@ -151,6 +151,13 @@ a {
   background: #d384b9;
 }
 
+@media (max-width: 768px) {
+  .presentation {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
 .section {
   padding: 60px 20px;
   text-align: center;
@@ -163,7 +170,7 @@ a {
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   color: #fffdfd;
 }
 
@@ -200,12 +207,15 @@ a {
 }
 
 .card img {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .card-text {
   flex: 1;
@@ -228,10 +238,130 @@ a {
 }
 
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  cursor: pointer;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 15px;
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+  color: white;
+  padding: 15px 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Style de la modale */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
   justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+}
+
+.lightbox-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  user-select: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #d48fa3;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: #b76c82;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .gallery-item img {
+    height: 150px;
+  }
+  .gallery-item figcaption {
+    font-size: 1rem;
+  }
 }
 
 .contact-form {
@@ -311,6 +441,8 @@ a {
 .social-icons .tiktok {
   color: #000;
 }
+
+
 
 /* Animation de rebond */
 @keyframes bounce {
