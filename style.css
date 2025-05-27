@@ -602,7 +602,7 @@ padding: 12px 28px;
     justify-content: space-between;
     width: 25px;
     height: 20px;
-    background: black;
+    background: none;
     border: none;
     cursor: pointer;
     z-index: 1101;
@@ -613,7 +613,7 @@ padding: 12px 28px;
   .burger span {
     display: block;
     height: 3px;
-    background: #1e1e1e;
+    background: black;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
