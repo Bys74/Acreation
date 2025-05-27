@@ -602,7 +602,7 @@ padding: 12px 28px;
     justify-content: space-between;
     width: 25px;
     height: 20px;
-    background: none;
+    background: black;
     border: none;
     cursor: pointer;
     z-index: 1101;
