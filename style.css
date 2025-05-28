@@ -505,7 +505,7 @@ padding: 12px 28px;
 .map-container {
   position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   border-radius: 15px;
