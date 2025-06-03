@@ -52,15 +52,24 @@
     <h2 class="section-title">Mes Services</h2>
     <div class="cards">
 
-      <div class="card">
-        <img src="images/mariage.jpg" alt="Coiffure mariage" />
-        <div class="card-text">
-          <h3>Coiffure de mariage & événements</h3>
-          <p>Pour le plus beau jour de votre vie, chaque détail compte et votre coiffure en fait partie. Ensemble créons une coiffure qui vous ressemble, en accord avec votre robe, votre style et l'ambiance de votre mariage.</p>
-        </div>
+  <div class="card">
+    <div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="images/coupe.jpg" alt="coupe cheveux">
+        <img src="images/coiffure3.jpg" alt="autre coupe">
+        <img src="images/coiffure4.jpg" alt="encore une coupe">
       </div>
+    <button class="carousel-btn next">&#10095;</button>
+      </div>
+        <div class="card-text">
+          <h3>Coupe de cheveux personnalisée</h3>
+          <p>Femme, hommes et enfants. Que ce soit pour une coupe courte, un carré élégant ou une retouche, je vous accueille dans un cadre chaleureux et bienveillant.</p>
+      </div>
+    </div>
 
-      <div class="card reverse">
+
+            <div class="card reverse">
         <img src="images/coloration.jpeg" alt="Coloration" />
         <div class="card-text">
           <h3>Coloration balayage & effets lumière</h3>
@@ -68,27 +77,35 @@
         </div>
       </div>
 
-      <div class="card">
-        <img src="images/coupe.jpg" alt="coupe cheveux" />
-        <div class="card-text">
-          <h3>Coupe de cheveux personnalisée</h3>
-          <p>Femme, hommes et enfants. Que ce soit pour une coupe courte, un carré élégant ou une retouche, je vous accueille dans un cadre chaleureux et bienveillant.</p>
-        </div>
-      </div>
-
-      <div class="card reverse">
-        <img src="images/Atelier.jpg" alt="Atelier coiffure" />
-        <div class="card-text">
-          <h3>Atelier coiffure parent-enfant & autocoiffage</h3>
-          <p>Envie de partager un moment complice avec votre enfant ou d'apprendre à coiffer vos cheveux au quotidien ? Je vous propose des ateliers ludiques et pratiques, adaptés à tous les niveaux.</p>
-        </div>
-      </div>
-
-      <div class="card">
+            <div class="card">
         <img src="images/perruque.jpg" alt="perruque" />
         <div class="card-text">
           <h3>Prothése capilaire</h3>
           <p>Prothésiste capilaire agréé par la Sécurité Sociale, j'accompagne avec douceur et discrétion toutes les personnes touchées par une perte de cheveux liée à un traitement, une maladie ou une alopécie.</p>
+        </div>
+      </div>
+
+      <div class="card reverse">
+            <div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="images/mariage.jpg" alt="coupe mariage">
+        <img src="images/mariage2.jpg" alt="autre coupe mariage">
+        <img src="images/mariage3.jpg" alt="encore une coupe mariage">
+      </div>
+    <button class="carousel-btn next">&#10095;</button>
+      </div>
+        <div class="card-text">
+          <h3>Coiffure de mariage & événements</h3>
+          <p>Pour le plus beau jour de votre vie, chaque détail compte et votre coiffure en fait partie. Ensemble créons une coiffure qui vous ressemble, en accord avec votre robe, votre style et l'ambiance de votre mariage.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/Atelier.jpg" alt="Atelier coiffure" />
+        <div class="card-text">
+          <h3>Atelier coiffure parent-enfant & autocoiffage</h3>
+          <p>Envie de partager un moment complice avec votre enfant ou d'apprendre à coiffer vos cheveux au quotidien ? Je vous propose des ateliers ludiques et pratiques, adaptés à tous les niveaux.</p>
         </div>
       </div>
 
@@ -254,6 +271,35 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
   </script>
+
+<script>
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    };
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+  });
+</script>
+
 
 </body>
 </html>
