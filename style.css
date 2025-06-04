@@ -126,7 +126,7 @@ a {
 
 .hero-minimal {
   position: relative;
-  padding: 80px 20px 100px;
+  padding: 80px 20px 15px;
   text-align: center;
   color: white;
   z-index: 1;
