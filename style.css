@@ -703,7 +703,7 @@ padding: 12px 28px;
 
 .horaires-list li {
   /*background-color: rgba(203, 34, 34, 0.569); /* Optionnel pour contraste */
-  padding: px 12px;
+  padding: -10px 12px;
   border-radius: 8px;
 }
 
@@ -747,4 +747,15 @@ padding: 12px 28px;
 }
 .carousel-btn.next {
   right: 5px;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(160deg, #fdf6f9 0%, #f3d4ec 40%, #d2b4e8 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: #2c2c2c; /* Couleur de texte pour bon contraste */
+  }
 }
