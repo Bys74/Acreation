@@ -370,11 +370,16 @@ a {
   opacity: 1;
 }
 
-.lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
+.lightbox-content img {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  max-height: 80vh; /* <-- ajuste à la hauteur visible */
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  user-select: none;
 }
+
 
 .lightbox-content img {
   width: 100%;
@@ -681,7 +686,7 @@ padding: 12px 28px;
 }
 
 .horaires {
-  background: rgba(0, 0, 0, 0.367);
+  background: rgba(0, 0, 0, 0);
   color: #e6e5e5;
   padding: 40px 20px;
   margin-top: 0;
