@@ -681,7 +681,7 @@ padding: 12px 28px;
 }
 
 .horaires {
-  background: rgba(0, 0, 0, 0.287);
+  background: rgba(0, 0, 0, 0.367);
   color: #e6e5e5;
   padding: 40px 20px;
   margin-top: 0;
@@ -702,8 +702,8 @@ padding: 12px 28px;
 }
 
 .horaires-list li {
-  background-color: rgba(0, 0, 0, 0.036); /* Optionnel pour contraste */
-  padding: 8px 12px;
+  /*background-color: rgba(203, 34, 34, 0.569); /* Optionnel pour contraste */
+  padding: px 12px;
   border-radius: 8px;
 }
 
