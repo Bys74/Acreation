@@ -752,10 +752,11 @@ padding: 12px 28px;
 
 @media (max-width: 768px) {
   body {
+    background-image: none; /* <- Ceci désactive l'image de fond */
     background: linear-gradient(160deg, #fdf6f9 0%, #f3d4ec 40%, #d2b4e8 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    color: #2c2c2c; /* Couleur de texte pour bon contraste */
+    color: #2c2c2c;
   }
 }
