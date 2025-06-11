@@ -320,16 +320,16 @@ navLinks.querySelectorAll('a').forEach(link => {
 
   <script>
   (function() {
-    emailjs.init("VOTRE_PUBLIC_KEY_ICI");
+    emailjs.init("tCM8yL8km_EiLxWER");
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const serviceID = 'VOTRE_SERVICE_ID';
-    const templateID = 'VOTRE_TEMPLATE_ID';
+    const service_ub3xn8d = 'service_ub3xn8d';
+    const template_w2wmkv2 = 'VOTRE_TEMPLATE_ID';
 
-    emailjs.sendForm(serviceID, templateID, this)
+    emailjs.sendForm(service_ub3xn8d, template_w2wmkv2, this)
       .then(() => {
         alert('Message envoyé ! Merci pour votre contact.');
         this.reset();
