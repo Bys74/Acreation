@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -185,7 +186,7 @@
   <section class="section" id="contact">
     <h2 class="section-title">Contactez-moi</h2>
 <div class="container">
-  <form class="contact-form" action="#" method="POST">
+  <form class="contact-form" id="contact-form" action="#" method="POST">
     <input type="text" name="name" placeholder="Votre nom" required />
     <input type="email" name="email" placeholder="Votre adresse email" required />
     <textarea name="message" placeholder="Votre message..." required></textarea>
@@ -314,6 +315,28 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 
     window.addEventListener('resize', updateCarousel);
+  });
+</script>
+
+  <script>
+  (function() {
+    emailjs.init("VOTRE_PUBLIC_KEY_ICI");
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const serviceID = 'VOTRE_SERVICE_ID';
+    const templateID = 'VOTRE_TEMPLATE_ID';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        alert('Message envoyé ! Merci pour votre contact.');
+        this.reset();
+      }, (err) => {
+        alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+        console.error(JSON.stringify(err));
+      });
   });
 </script>
 
