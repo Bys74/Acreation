@@ -326,10 +326,10 @@ navLinks.querySelectorAll('a').forEach(link => {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const service_ub3xn8d = 'service_ub3xn8d';
-    const template_w2wmkv2 = 'template_w2wmkv2';
+    const serviceID = 'service_ub3xn8d';
+    const templateID = 'template_w2wmkv2';
 
-    emailjs.sendForm(service_ub3xn8d, template_w2wmkv2, this)
+    emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         alert('Message envoyé ! Merci pour votre contact.');
         this.reset();
