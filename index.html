@@ -1,15 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"> 
 <head>
-  <meta name="google-site-verification" content="qFJ5iXWAiM556YeJAfIpNFZ-xOrvvjIeeEUCqLMSeQw" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A.CréationCoiffure</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="A.CréationCoiffure" />
+  <meta name="description" content="Salon de coiffure à Marnaz : A.CréationCoiffure propose coupes, colorations, prothèses capillaires et coiffures de mariage. Prenez rendez-vous en ligne ou par téléphone.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+
+  <title>Coiffeuse à Marnaz - A.CréationCoiffure | Coupe, couleur, mariage</title>
+
+  <!-- Open Graph pour Facebook -->
+  <meta property="og:title" content="A.CréationCoiffure - Coiffeuse à Marnaz" />
+  <meta property="og:description" content="Coiffeuse professionnelle à Marnaz - Coupe, coloration, prothèses capillaires et coiffures de mariage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bys74.github.io/Acreation/" />
+  <meta property="og:image" content="https://bys74.github.io/Acreation/images/Logo.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="A.CréationCoiffure - Coiffeuse à Marnaz" />
+  <meta name="twitter:description" content="Coiffure femme, homme, enfant, couleur, prothèses capillaires et mariages à Marnaz." />
+  <meta name="twitter:image" content="https://bys74.github.io/Acreation/images/Logo.jpg" />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="qFJ5iXWAiM556YeJAfIpNFZ-xOrvvjIeeEUCqLMSeQw" />
+
+  <!-- JSON-LD pour référencement local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "A.CréationCoiffure",
+    "image": "https://bys74.github.io/Acreation/images/Logo.jpg",
+    "description": "Salon de coiffure à Marnaz - Coupe, coloration, prothèses capillaires, coiffure de mariage.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "102 route de Blanzy",
+      "addressLocality": "Marnaz",
+      "postalCode": "74460",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.056825,
+      "longitude": 6.524659
+    },
+    "url": "https://bys74.github.io/Acreation/",
+    "telephone": "+33781374295",
+    "openingHours": [
+      "Mo,Tu,Th,Fr 09:00-18:00",
+      "We,Sa 09:00-13:00"
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://facebook.com/A.creationcoiffure",
+      "https://instagram.com/a_creationcoiffure",
+      "https://tiktok.com/@a.creationcoiffuremarnaz"
+    ]
+  }
+  </script>
+
+  <!-- Feuilles de style -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Email JS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
+
 
 <body>
 <header class="header">
@@ -46,7 +107,6 @@
   <section class="hero-minimal">
     <div class="container hero-minimal-content">
       <div class="hero-minimal-text">
-        <h1></h1>
         <a href="https://a-creationcoiffure2.reservio.com" target="_blank" class="btn">Prendre rendez-vous</a>
       </div>
     </div>
@@ -62,7 +122,7 @@
       <div class="carousel-track">
         <img src="images/coupe.jpg" alt="coupe cheveux">
         <img src="images/coupe3.jpg" alt="Coupe garçon">
-        <img src="images/coiffure4.jpg" alt="encore une coupe">
+        <img src="images/coiffure4.jpg" alt="Coupe de cheveux pour évenement">
       </div>
     <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -77,9 +137,9 @@
     <div class="carousel">
     <button class="carousel-btn prev">&#10094;</button>
       <div class="carousel-track">
-        <img src="images/couleur3.jpg" alt="coupe cheveux">
-        <img src="images/couleur2.jpg" alt="autre coupe">
-        <img src="images/coloration.jpeg" alt="encore une coupe">
+        <img src="images/couleur3.jpg" alt="Coloration cheveux blond">
+        <img src="images/couleur2.jpg" alt="Coloration cheveux rouge">
+        <img src="images/coloration.jpeg" alt="Image montrant la pose de la couleur">
       </div>
     <button class="carousel-btn next">&#10095;</button>
       </div>
@@ -93,15 +153,15 @@
     <div class="carousel">
     <button class="carousel-btn prev">&#10094;</button>
       <div class="carousel-track">
-        <img src="images/perruque3.jpg" alt="Perruque">
-        <img src="images/perruque1.jpg" alt="autre perruque">
-        <img src="images/perruque2.jpg" alt="encore une perruque">
+        <img src="images/perruque3.jpg" alt="Perruque cheveux blanc, gris">
+        <img src="images/perruque1.jpg" alt="Perruque brune sur posage">
+        <img src="images/perruque2.jpg" alt="perruque blonde bouclé sur posage">
       </div>
     <button class="carousel-btn next">&#10095;</button>
       </div>
         <div class="card-text">
-          <h3>Prothése capilaire</h3>
-          <p>Prothésiste capilaire agréé par la Sécurité Sociale, j'accompagne avec douceur et discrétion toutes les personnes touchées par une perte de cheveux liée à un traitement, une maladie ou une alopécie.</p>
+          <h3>Prothèse capillaire</h3>
+          <p>Prothésiste capillaire agrée par la Sécurité Sociale, j'accompagne avec douceur et discrétion toutes les personnes touchées par une perte de cheveux liée à un traitement, une maladie ou une alopécie.</p>
         </div>
       </div>
 
@@ -146,7 +206,7 @@
     <h2 class="section-title">Mes Réalisations</h2>
     <div class="gallery">
       <figure class="gallery-item">
-        <img src="images/coiffure3.jpg" alt="Coiffure Tresse" />
+        <img src="images/coiffure3.jpg" alt="Coiffure Tresse de mariage bohème" />
         <figcaption>Tresse </figcaption>
       </figure>
       <figure class="gallery-item">
@@ -166,8 +226,8 @@
         <figcaption>Prothèse capillaire sur-mesure</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/Coiffure5.jpg" alt="Préstations techniques" />
-        <figcaption>Préstations techniques</figcaption>
+        <img src="images/Coiffure5.jpg" alt="Prestations techniques" />
+        <figcaption>Prestations techniques</figcaption>
       </figure>
       </figure>
       <figure class="gallery-item">
